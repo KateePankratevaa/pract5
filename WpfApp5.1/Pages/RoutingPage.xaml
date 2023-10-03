@@ -1,0 +1,44 @@
+﻿<Page x:Class="WpfApp5._1.Pages.RoutingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5._1.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="RoutingPage"
+      Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Background="White" Grid.Column="1"/>
+        <TextBlock Background="White" Grid.Column="1" Grid.Row="1"/>
+
+        <Border BorderThickness="7" BorderBrush="Black" Grid.Row="0">
+            <Button Width="220" Height="237">
+                <Rectangle Width="150" Height="150" Fill="REd"></Rectangle>
+            </Button>
+        </Border>
+        <Border BorderThickness="7" BorderBrush="Black" Grid.Row="1">
+            <Button Width="220" Height="237">
+                <Ellipse Fill="Red" Height="150" Width="150"/>
+            </Button>
+        </Border>
+
+        <ScrollViewer Grid.Column="1" Height="200" >
+            <TextBlock Background="White" Name="TextBlockTop" TextWrapping="Wrap" />
+        </ScrollViewer>
+        <ScrollViewer Grid.Column="1" Grid.Row="1" Height="200" >
+            <TextBlock Background="White" Name="TextBlockBottom" MaxHeight="200" />
+        </ScrollViewer>
+
+    </Grid>
+</Page>
